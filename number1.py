@@ -77,7 +77,7 @@ def a_star(start_state, goal_state):
 
 # Exemplo de uso:
 start_state = generate_random_state(9)  # Estado inicial aleatório
-goal_state = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]  # Estado final
+goal_state = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]  # Estado final
 solution = a_star(start_state, goal_state)
 
 if solution:
