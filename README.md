@@ -3,6 +3,7 @@ TRABALHO DE CARACTER AVALIATIVO DE IA.
 
 Elementos de Grupo: Gildo Cumbane, Marcelina Pinto & Belísio Pateguana
 
+-----------------------------------------------------------------------
 Classe PuzzleNode:
 
 Esta classe representa um nó no espaço de busca do quebra-cabeça.
@@ -43,3 +44,37 @@ Exemplo de Uso:
 Gera um estado inicial aleatório e um estado final predefinido.
 Chama a função a_star para encontrar a solução.
 Se uma solução for encontrada, reconstrói o caminho da solução e imprime cada passo do caminho. Caso contrário, imprime que não foi encontrada uma solução.
+
+-------------------------------------------------------------------------------
+
+Classe TicTacToe:
+Esta classe representa o jogo da velha.
+__init__: Inicializa o tabuleiro vazio (uma lista de listas) e define o jogador atual como o jogador 1.
+is_winner(player): Verifica se um jogador específico venceu o jogo, percorrendo as linhas, colunas e diagonais do tabuleiro.
+is_full(): Verifica se o tabuleiro está completamente preenchido.
+is_terminal(): Verifica se o jogo acabou, ou seja, se alguém venceu ou se o tabuleiro está cheio.
+legal_moves(): Retorna uma lista de todas as jogadas legais disponíveis (posições vazias) no tabuleiro.
+make_move(move): Realiza uma jogada na posição especificada no tabuleiro.
+print_board(): Imprime o tabuleiro atual.
+
+Função minimax(game):
+Implementa o algoritmo Mini-Max para escolher a melhor jogada para um determinado jogador em um determinado estado do jogo.
+A recursão ocorre até que o jogo termine.
+Retorna o valor de utilidade (pontuação) do estado do jogo.
+
+Função alphabeta(game, alpha, beta):
+Implementa o algoritmo Alfa-Beta, que é uma melhoria do Mini-Max para tornar o algoritmo mais eficiente.
+Usa os parâmetros alpha e beta para fazer poda alfa-beta.
+Retorna o valor de utilidade (pontuação) do estado do jogo.
+Funções player_minimax(game) e player_alphabeta(game):
+Representam jogadores que utilizam os algoritmos Mini-Max e Alfa-Beta, respectivamente, para fazer suas jogadas.
+Cada jogador avalia todas as jogadas legais disponíveis e escolhe aquela que maximiza sua pontuação de utilidade, simulando o jogo até o fim.
+
+Função play_game(player1, player2):
+Simula um jogo entre dois jogadores, onde player1 e player2 são funções que representam os jogadores que usam Mini-Max ou Alfa-Beta.
+O jogo continua até que haja um vencedor ou até que o tabuleiro esteja cheio.
+Imprime o tabuleiro após cada jogada.
+No final do jogo, imprime o resultado (vitória de X, vitória de O ou empate).
+
+Execução do Jogo:
+Chama a função play_game com player_minimax e player_alphabeta como argumentos para simular um jogo entre dois jogadores que usam Mini-Max e Alfa-Beta, respectivamente.
