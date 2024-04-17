@@ -3,7 +3,6 @@ TRABALHO DE CARACTER AVALIATIVO DE IA.
 
 Elementos de Grupo: Gildo Cumbane, Marcelina Pinto & Belísio Pateguana
 
-
 Classe PuzzleNode:
 
 Esta classe representa um nó no espaço de busca do quebra-cabeça.
@@ -17,6 +16,7 @@ f: A soma do custo atual g e da heurística h.
 __eq__, __hash__, __lt__: Estes métodos são definidos para permitir a comparação, o hash e a ordenação de objetos PuzzleNode.
 
 Função h(state, goal_state):
+
 Esta função define a heurística para o problema, que é o número de peças fora do lugar no estado atual em comparação com o estado final.
 Função get_neighbors(state):
 Esta função retorna os estados alcançáveis a partir do estado atual realizando movimentos válidos (cima, baixo, esquerda ou direita).
@@ -24,6 +24,7 @@ Primeiro, ela encontra a posição do espaço vazio no estado.
 Em seguida, determina os movimentos possíveis a partir dessa posição e gera os novos estados resultantes desses movimentos.
 
 Função find_zero_position(state):
+
 Esta função encontra a posição do zero (espaço vazio) no estado atual.
 Função generate_random_state(size):
 Esta função gera um estado inicial aleatório.
@@ -38,6 +39,7 @@ Para cada estado vizinho, calcula o custo g e o valor da heurística h, cria um 
 Retorna a solução (um nó) se for encontrada, caso contrário, retorna None.
 
 Exemplo de Uso:
+
 Gera um estado inicial aleatório e um estado final predefinido.
 Chama a função a_star para encontrar a solução.
 Se uma solução for encontrada, reconstrói o caminho da solução e imprime cada passo do caminho. Caso contrário, imprime que não foi encontrada uma solução.
